@@ -1,0 +1,12 @@
+Bài 3 : Xử lý Sự cố Giao diện Website Doanh nghiệp
+Vấn đề: Trong giao diện khóa học của PTIT-LMS, khung "Nội dung bài học" đang bị đè lên khung "Danh sách video". Khi soi bằng F12, các thông số kích thước trông rất lộn xộn, không biết khoảng cách nào là do viền (border) hay do lề (margin).
+Yêu cầu:Phần 1: Báo cáo phân tích (I/O)
+        Phần 2: Thiết kế giải pháp
+Giải pháp:
+*Phần 1 : Báo cáo phân tích
+        - Box model có thông số gây đè 
+        - và video có thông số lệch định vị
+*Phần 2 : GIải pháp
+      -->*, *::before, *::after { box-sizing: border-box; }
+.lesson-content { margin-top: 15px; padding: 20px; border: 1px solid #ccc; }
+.video-list { margin-right: 20px; padding: 15px; border: 1px solid #e0e0e0; }
